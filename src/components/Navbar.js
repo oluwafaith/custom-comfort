@@ -10,7 +10,7 @@ import { useUserContext } from '../context/user_context'
 
 
 const Nav = () => {
-  // const { openSidebar } = useProductsContext()
+  const { openSidebar } = useProductsContext()
   // const { myUser } = useUserContext()
   return (
     <NavContainer>
@@ -19,7 +19,7 @@ const Nav = () => {
           <Link to='/'>
             <img src={logo} alt='comfy sloth' />
           </Link>
-          <button type='button' className='nav-toggle' >
+          <button type='button' className='nav-toggle' onClick={openSidebar} >
             <FaBars />
           </button>
         </div>
